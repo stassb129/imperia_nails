@@ -1,6 +1,6 @@
 import express from 'express'
 import path from 'path'
-import {requestTime, logger} from './middlewares/middlewares.js'
+import {logger} from './middlewares/middlewares.js'
 import router from "./routes/servers.js"
 
 
@@ -13,8 +13,8 @@ app.set('view engine', 'ejs')
 app.set('views', path.resolve(__dirname, 'client/views/pages'))
 
 app.use(express.static(path.resolve(__dirname + '/client')))
-app.use(requestTime)
 app.use(logger)
+
 app.use(router)
 
 

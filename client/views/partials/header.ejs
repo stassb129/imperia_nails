@@ -1,3 +1,26 @@
 <header>
-    <h2>Header</h2>
+    <div class="container_fluid my_header">
+        <div id="menu-trigger" class="menu-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu center">
+            <ul class="menu-list center">
+                <li>
+                    <a class="<% if (active === 'home'){ %>active_link<% } %>" href="#">Главная</a>
+                </li>
+                <li>
+                    <a class="<% if (active === 'portfolio'){ %>active_link<% } %>" href="#">Портфолио</a>
+                </li>
+                <li>
+                    <a class="<% if (active === 'about'){ %>active_link<% } %>" href="#">О нас</a>
+                </li>
+                <li>
+                    <a class="<% if (active === 'contacts'){ %>active_link<% } %>" href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
